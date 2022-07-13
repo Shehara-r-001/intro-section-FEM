@@ -6,35 +6,42 @@ import { ReactComponent as CloseMenu } from '../../images/icon-close-menu.svg';
 import { ReactComponent as ArrowDown } from '../../images/icon-arrow-down.svg';
 
 const Header = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [hideMenu, setHideMenu] = useState(true);
   return (
     <div className='header'>
       <div className='header__container'>
         <Logo />
-        <Menu width={20} />
-        <div
-          className='header__sidebar'
-          // style={{ transform: 'translateX(100%)' }}
-        >
-          <div className='header__closeMenu'>
-            <CloseMenu />
+        <div className='header__menuIcon' style={{ cursor: 'pointer' }}>
+          <Menu onClick={() => setHideMenu(false)} width={20} />
+        </div>
+        <div className={`header__sidebar ${hideMenu && 'header__hideMenu'}`}>
+          <div className={`header__closeMenu `}>
+            <CloseMenu onClick={() => setHideMenu(true)} />
           </div>
-          <ul>
-            <li>
-              Features
-              <span className='sidebar__linkSpan'>
-                <ArrowDown />
-              </span>
-            </li>
-            <li>
-              Company
-              <span className='sidebar__linkSpan'>
-                <ArrowDown />
-              </span>
-            </li>
-            <li>Careers</li>
-            <li>About</li>
-          </ul>
+          <div>
+            <ul>
+              <li>
+                Features
+                <span className='sidebar__linkSpan'>
+                  <ArrowDown />
+                </span>
+              </li>
+              <li>
+                Company
+                <span className='sidebar__linkSpan'>
+                  <ArrowDown />
+                </span>
+              </li>
+              <li>Careers</li>
+              <li>About</li>
+            </ul>
+          </div>
+          <div className='header__btnCont'>
+            <button className='header__btn'>Login</button>
+            <button className='header__btn header__btn__border'>
+              Register
+            </button>
+          </div>
         </div>
       </div>
     </div>
