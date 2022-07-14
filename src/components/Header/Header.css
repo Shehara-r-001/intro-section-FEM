@@ -73,6 +73,10 @@ ul li {
   cursor: pointer;
 }
 
+.header__btn:hover {
+  color: var(--AlmostBlack);
+}
+
 .header__btn__border {
   border: solid 1px var(--MediumGray);
   width: 60%;
@@ -89,6 +93,27 @@ ul li {
 .header__btnCont {
   display: flex;
   flex-direction: column;
+}
+
+.header__featureDrop {
+  margin-top: -4px;
+  margin-left: 10px;
+  background-color: var(--AlmostWhite);
+  width: 110px;
+  padding: 8px 4px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.header__display-none {
+  display: none;
+}
+
+.header__links__underline:hover {
+  color: var(--AlmostBlack);
+  transition: ease-in-out;
+  transition-duration: 300ms;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
@@ -145,5 +170,11 @@ ul li {
 
   .header__btnCont {
     flex-direction: row;
+  }
+
+  .header__featureDrop {
+    position: absolute;
+    background-color: white;
+    width: 100px;
   }
 }
