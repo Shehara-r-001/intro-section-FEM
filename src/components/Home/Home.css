@@ -61,6 +61,7 @@ body {
   width: 70px;
   object-fit: contain;
   margin: 0 8px;
+  cursor: pointer;
 }
 
 .home__audiophile {
