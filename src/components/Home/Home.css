@@ -1,0 +1,122 @@
+:root {
+  --AlmostWhite: hsl(0, 0%, 98%);
+  --MediumGray: hsl(0, 0%, 41%);
+  --AlmostBlack: hsl(0, 0%, 8%);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.home {
+  width: 100vw;
+}
+
+.home__div {
+  width: 100%;
+}
+
+.home__hero-mobile {
+  width: 100%;
+  object-fit: contain;
+}
+
+.home__title {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.home__description {
+  color: var(--MediumGray);
+  text-align: center;
+  padding: 5px 30px;
+  line-height: 22px;
+}
+
+.home__button {
+  background-color: var(--AlmostBlack);
+  color: var(--AlmostWhite);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.home__button:hover {
+  opacity: 0.9;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-delay: 200ms;
+}
+
+.home__bottomCont {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.home__providers {
+  width: 70px;
+  object-fit: contain;
+  margin: 0 8px;
+}
+
+.home__audiophile {
+  width: 45px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+
+  .home__div {
+    width: 45vw;
+  }
+
+  .home__div-margin {
+    margin-right: 10vw;
+  }
+
+  .home__hero-mobile {
+    height: calc(100vh - 120px);
+  }
+
+  .home__details-desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 10vw;
+  }
+
+  .home__title {
+    font-size: 50px;
+    width: 70%;
+    text-align: left;
+  }
+
+  .home__description {
+    padding: 0;
+    text-align: left;
+    width: 60%;
+  }
+
+  .home__providers {
+    margin: 0;
+  }
+
+  .home__bottomCont {
+    margin-top: 60px;
+    width: 70%;
+    justify-content: space-between;
+  }
+
+  .home__button {
+    margin-top: 30px;
+  }
+}

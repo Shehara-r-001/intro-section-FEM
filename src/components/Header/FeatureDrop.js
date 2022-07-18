@@ -19,7 +19,7 @@ const FeatureDrop = () => {
         </div>
         <div className='feature__item'>
           <img className='feature__icon' src={reminders} alt='' />
-          <p>Remiders</p>
+          <p>Reminders</p>
         </div>
         <div className='feature__item'>
           <img className='feature__icon' src={planning} alt='' />

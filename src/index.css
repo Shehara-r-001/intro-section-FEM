@@ -6,6 +6,11 @@
   --AlmostBlack: hsl(0, 0%, 8%);
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -15,7 +20,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--AlmostWhite);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 code {
